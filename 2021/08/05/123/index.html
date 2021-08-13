@@ -23,7 +23,7 @@
   <meta content="Hexo-这是我的博客blog----&gt;&gt;&gt;&gt;.....&gt;&gt;&gt;.????" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1628866369495" as="style">
+  <link rel="preload" href="/css/style.css?time=1628867154887" as="style">
   <!-- 页面元数据 -->
   <title>123 - Hexo-这是我的博客blog---->>>>.....>>>.????</title>
   <meta name="keywords" content="null">
@@ -2269,8 +2269,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1628866369495" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1628866369495"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1628867154887" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1628867154887"></noscript>
     <script>
       var userColorScheme=localStorage.getItem("user-color-scheme")
       if(userColorScheme){
@@ -2979,6 +2979,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </div>
       
     
+    <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("08/10/2021 00:00:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "已创建博客 共计："+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+
     <!-- Custom Files footer begin-->
     
     <!-- Custom Files footer end-->
@@ -3419,7 +3437,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       volantis.APlayerController = {};
     
     volantis.import.jQuery().then(()=>{
-      volantis.js('/js/rightMenu.js?time=1628866369495') // 此处依赖JQ
+      volantis.js('/js/rightMenu.js?time=1628867154887') // 此处依赖JQ
     })
   </script>
 
@@ -3531,19 +3549,19 @@ volantis.pjax.push(bindToggleButton);
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1628866369495")
+        volantis.js("/js/plugins/sites.js?time=1628867154887")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1628866369495")
+        volantis.js("/js/plugins/friends.js?time=1628867154887")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1628866369495")
+        volantis.js("/js/plugins/contributors.js?time=1628867154887")
       }
     
   };
@@ -3645,7 +3663,7 @@ volantis.pjax.push(bindToggleButton);
       emojiMaps: emojiMaps,
     }))
   }
-  volantis.js('/js/valine.js?time=1628866369495').then(pjax_valine)
+  volantis.js('/js/valine.js?time=1628867154887').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3654,7 +3672,7 @@ volantis.pjax.push(bindToggleButton);
 
 
 
-<script src="/js/app.js?time=1628866369495.js"></script>
+<script src="/js/app.js?time=1628867154887.js"></script>
 
 
 <!-- optional -->
@@ -3666,7 +3684,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 function loadSearchService(){
   volantis.import.jQuery().then(()=>{
     // see: layout/_partial/scripts/cdnCtrl.ejs
-    volantis.js('/js/search/hexo.js?time=1628866369495',setSearchService); // 此处依赖JQ
+    volantis.js('/js/search/hexo.js?time=1628867154887',setSearchService); // 此处依赖JQ
   })
   document.querySelectorAll('.input.u-search-input').forEach((e)=>{
     e.removeEventListener('focus',loadSearchService,false)
@@ -3923,8 +3941,8 @@ function setSearchService() {
   <script>
   volantis.message = (title, message, icon = 'fas fa-info-circle light-blue', time = '5000', position = 'topRight', done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1628866369495')
-      volantis.js('/js/message.js?time=1628866369495', () => {
+      volantis.css('/css/message.css?time=1628867154887')
+      volantis.js('/js/message.js?time=1628867154887', () => {
         tozashMessage(title, message, icon, time, position, done);
       });
     } else {
@@ -3957,8 +3975,8 @@ function setSearchService() {
 
   volantis.question = (title, message, success = null, cancel = null, done = null, icon = 'fas fa-question-circle light-blue', time = '20000') => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1628866369495')
-      volantis.js('/js/message.js?time=1628866369495', () => {
+      volantis.css('/css/message.css?time=1628867154887')
+      volantis.js('/js/message.js?time=1628867154887', () => {
         tozashQuestion(title, message, icon , time, success, cancel, done);
       });
     } else {
